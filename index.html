@@ -283,6 +283,7 @@
         .section-content,
         .section-image {
             width: 48%;
+            text-align: left;
         }
 
         .section-image img {
@@ -396,7 +397,80 @@
         </div>
         <button class="accordion-right">Read More...</button>
         <div class="panel">
-            <p>Additional content...</p>
+            <div class="section-row">
+                <div class="section-image">
+                    <img src="baseline-model.jpg" alt="Modeling Image">
+                </div>
+                <div class="section-content">
+                    <h3>Technical Architecture</h3>
+                    <p><b>Medical NER (Named Entity Recognition):</b>
+                    </p>
+                    <p>Input: Clinical notes or medical text data.
+                    </p>
+                    <p>Function: Extracts key medical entities such as symptoms, diagnoses, medications, and procedures
+                        from the input text.
+                    </p>
+                    <p>Output: Structured medical data with identified entities.
+                    </p>
+                    <p><b>Knowledge Graph:</b>
+                    </p>
+                    <p>Input: Structured medical data from the Medical NER.
+                    </p>
+                    <p>Function: Integrates and organizes the extracted entities into a comprehensive knowledge graph.
+                        This graph represents relationships and connections between different medical entities.
+                    </p>
+                    <p>Output: Enhanced and interconnected medical knowledge.
+                    </p>
+                    <p><b>Local LLM (Large Language Model):</b>
+                    </p>
+                    <p>Input: Clinical notes or text data.
+                    </p>
+                    <p>Function: Processes the clinical text to understand the context and generates initial prompts
+                        based on the input.
+                    </p>
+                    <p>Output: Generated prompts containing essential information extracted from the clinical notes.
+                    </p>
+                    <p><b>Prompt Generation:</b>
+                    </p>
+                    <p>Input: Initial understanding from the Local LLM and additional insights from the Knowledge Graph.
+                    </p>
+                    <p>Function: Combines the initial prompts with the enriched medical knowledge to create
+                        comprehensive and precise prompts for further processing.
+                    </p>
+                    <p>Output: Detailed and contextually rich prompts.
+                    </p>
+                    <p><b>Augmented LLM:</b>
+                    </p>
+                    <p>Input: Detailed prompts generated from the previous steps.
+                    </p>
+                    <p>Function: Uses advanced language models augmented with the enriched medical knowledge to predict
+                        the appropriate ICD-10 codes.
+                    </p>
+                    <p>Output: Predicted ICD-10 codes based on the clinical notes and the augmented prompts.
+                    </p>
+                    <p><b>ICD-10 Code:</b>
+                    </p>
+                    <p>Input: Predicted ICD-10 codes from the Augmented LLM.
+                    </p>
+                    <p>Function: Final output representing the standardized medical codes for diagnoses, which can be
+                        used for billing, reporting, and medical record-keeping.
+                    </p>
+                    <p>Output: ICD-10 codes.
+                    </p>
+                    <br>
+                    <p><b>Flow Summary</b>
+                    </p>
+                    <p>Clinical notes are processed by the Medical NER to extract key medical entities.
+                    </p>
+                    <p>These entities are then structured and enriched in a Knowledge Graph.</p>
+                    <p>A Local LLM processes the original clinical notes to generate initial prompts.</p>
+                    <p>The prompts are combined with insights from the Knowledge Graph to create comprehensive prompts.
+                    </p>
+                    <p>An Augmented LLM uses these enriched prompts to predict accurate ICD-10 codes.</p>
+                    <p>The final output is a set of ICD-10 codes for the given clinical notes.</p>
+                </div>
+
+            </div>
         </div>
     </section>
 
