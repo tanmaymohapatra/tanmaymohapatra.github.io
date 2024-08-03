@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Coding Assistant</title>
+    <title>MedyCode Assistant</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Lora:wght@700&display=swap"
         rel="stylesheet">
@@ -15,14 +15,10 @@
             padding: 0;
         }
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            text-align: center;
-            padding: 15px 0;
-            background: rgba(81, 130, 190, 0.8);
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-right: 5px;
         }
 
         header nav a {
@@ -122,16 +118,16 @@
         #home h1 {
             font-family: 'Lora', serif;
             margin: 0;
-            font-size: 3em;
+            font-size: 4em;
             opacity: 0;
-            animation: fadeInText 2s forwards 0.5s, zoomInText 1s ease-in-out 1.5s;
+            animation: fadeInText 3s forwards 1.5s, zoomInText 2s ease-in-out 2.5s;
         }
 
         #home p {
             margin: 0;
             opacity: 0;
-            animation: fadeInText 2s forwards 1s;
-            font-size: 1.2em;
+            animation: fadeInText 4s forwards 3s;
+            font-size: 1.4em;
         }
 
         @keyframes fadeInText {
@@ -139,16 +135,6 @@
                 opacity: 1;
             }
         }
-
-        /* @keyframes zoomInText {
-            0% {
-                transform: scale(0);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        } */
 
         .animated-container {
             display: flex;
@@ -159,7 +145,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             opacity: 0;
-            animation: fadeIn 1.5s ease-in-out forwards;
+            animation: fadeIn 2.5s ease-in-out forwards;
             margin-top: 20px;
         }
 
@@ -171,19 +157,19 @@
 
         .animated-container span {
             color: darkblue;
-            font-size: 1.4em;
+            font-size: 1.5em;
         }
 
         .top-left {
-            animation-delay: 3s;
-        }
-
-        .top-right {
             animation-delay: 6s;
         }
 
-        .bottom-center {
+        .top-right {
             animation-delay: 9s;
+        }
+
+        .bottom-center {
+            animation-delay: 12s;
         }
 
         @keyframes fadeIn {
@@ -203,7 +189,7 @@
 <body>
     <section id="home">
         <div class="home-content">
-            <h1>MedyCode Assistant</h1>
+            <h1><img src="logo.jpg" alt="Logo" class="logo" />MedyCode Assistant</h1>
             <br>
             <p><i>Your innovative solution to revolutionize medical coding, enhancing accuracy, efficiency, and
                     productivity in the healthcare domain.</i></p>
